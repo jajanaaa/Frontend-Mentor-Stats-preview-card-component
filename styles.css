@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%); /* main background */
+  --dark-desaturated-blue: hsl(244, 38%, 16%); /* card background */
+  --soft-violet: hsl(277, 64%, 61%); /* accent */
+  --white: hsl(0, 0%, 100%); /* main heading, stats */
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* main paragraph */
+  --slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6); /* stat headings */
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  height: 100%;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  background-color: var(--dark-desaturated-blue);
+  width: 1110px;
+  height: 446px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.left-section {
+  display: flex;
+  justify-content: flex-start;
+  margin: 70px;
+  flex-direction: column;
+}
+
+img {
+  position: relative;
+  filter: hue-rotate(282deg);
+  filter: brightness(0.4) contrast(0.8) sepia(0.5) saturate(900%)
+    hue-rotate(243deg) opacity(0.7);
+  border-radius: 0 10px 10px 0;
+}
+
+.header {
+  color: var(--white);
+  font-weight: 700;
+  width: 326px;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+.span-violet {
+  color: var(--soft-violet);
+}
+
+.paragraph {
+  color: var(--slightly-transparent-white);
+  width: 356px;
+  margin-bottom: 90px;
+  line-height: 1.6;
+}
+
+.header-stats {
+  font-size: 1.5em;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.paragraph-stats {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--slightly-transparent-white);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.little-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    width: 327px;
+    height: 780px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  img {
+    width: 327px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .left-section {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .little-flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 21px;
+  }
+
+  .header {
+    text-align: center;
+    padding: 23px;
+    font-size: 1.9em;
+    margin: 0;
+  }
+
+  .paragraph {
+    text-align: center;
+    padding: 0 23px;
+    margin-bottom: 42px;
+    width: 314px;
+  }
+}
